@@ -35,12 +35,16 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 int item_pos = mImageIds.get(position);
 
-                ShowDialogBox(item_pos);
+               // ShowDialogBox(item_pos);
+
+                Intent i = new Intent(MainActivity.this,FullView.class);
+                i.putExtra("img_id",item_pos);
+                startActivity(i);
             }
         });
     }
 
-    public void ShowDialogBox(final int item_pos){
+   /* public void ShowDialogBox(final int item_pos){
         final Dialog dialog = new Dialog(this);
 
         dialog.setContentView(R.layout.custom_dialog);
@@ -80,5 +84,5 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    }
+    }*/
 }

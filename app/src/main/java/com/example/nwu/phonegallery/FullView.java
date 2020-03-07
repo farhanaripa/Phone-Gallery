@@ -18,4 +18,7 @@ public class FullView extends AppCompatActivity {
         int img_id = getIntent().getExtras().getInt("img_id");
         imageView.setImageResource(img_id);
     }
+
+
+
 }
